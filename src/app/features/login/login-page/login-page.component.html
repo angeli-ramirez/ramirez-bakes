@@ -1,30 +1,36 @@
 <div class="custom-bg flex justify-center items-center min-h-screen">
   <div class="w-full max-w-md bg-white rounded-lg p-8 shadow-md">
     <h2 class="text-gray-900 text-lg font-medium mb-5">Welcome Back, Admin!</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="relative mb-6">
+        <input type="email" id="email" formControlName="email" required
+          class="peer block w-full rounded border bg-gray-50 px-3 py-3 text-gray-700 focus:outline-none focus:border-gray-300"
+          [class.filled]="loginForm.get('email')?.value">
+        <label for="email"
+          class="pointer-events-none absolute left-3 top-2 text-sm text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-2 peer-focus:scale-90 peer-focus:text-primary"
+          [class.filled-label]="loginForm.get('email')?.value">
+          Email address
+        </label>
+      </div>
+      <div class="relative mb-6">
+        <input type="password" id="password" formControlName="password" required
+          class="peer block w-full rounded border rounded border bg-gray-50 px-3 py-3 text-gray-700 focus:outline-none focus:border-gray-300"
+          [class.filled]="loginForm.get('password')?.value">
+        <label for="password"
+          class="pointer-events-none absolute left-3 top-2 text-sm text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-2 peer-focus:scale-90 peer-focus:text-primary"
+          [class.filled-label]="loginForm.get('password')?.value">
+          Password
+        </label>
+      </div>
+      <div *ngIf="errorMessage" class="text-red-600 mb-4">
+        {{ errorMessage }}
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid || isLoading"
+        class="w-full text-white bg-indigo-500 py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg transition duration-150 ease-in-out"
+        [class.hover:bg-indigo-600]="loginForm.valid" [class.cursor-not-allowed]="!loginForm.valid">
+        {{ isLoading ? 'Logging in...' : 'Log In' }}
+      </button>
+    </form>
 
-    <div class="relative mb-6">
-      <input type="email" id="email"
-        class="peer block w-full rounded border border-gray-300 bg-gray-50 px-3 py-2 text-gray-700 focus:border-indigo-500 focus:bg-white focus:outline-none"
-        />
-      <label for="email"
-        class="pointer-events-none absolute left-3 top-2 text-sm text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-2 peer-focus:scale-90 peer-focus:text-primary">
-        Email address
-      </label>
-    </div>
-
-    <div class="relative mb-6">
-      <input type="password" id="password"
-        class="peer block w-full rounded border border-gray-300 bg-gray-50 px-3 py-2 text-gray-700 focus:border-indigo-500 focus:bg-white focus:outline-none"
-       />
-      <label for="password"
-        class="pointer-events-none absolute left-3 top-2 text-sm text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-2 peer-focus:scale-90 peer-focus:text-primary">
-        Password
-      </label>
-    </div>
-
-    <button
-      class="w-full text-white bg-indigo-500 py-2 px-4 rounded hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg transition duration-150 ease-in-out">
-      Log In
-    </button>
   </div>
 </div>

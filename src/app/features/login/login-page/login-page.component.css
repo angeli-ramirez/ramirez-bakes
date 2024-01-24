@@ -3,3 +3,9 @@
     background-size: cover;
     background-position: center;
 }
+
+input.filled+label,
+.filled-label {
+    transform: translate(-3px, -10px) scale(0.9);
+    color: var(--primary-color);
+}
