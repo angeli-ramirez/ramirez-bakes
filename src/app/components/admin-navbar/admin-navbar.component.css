@@ -1,0 +1,12 @@
+/* .active {
+    font-weight: bold;
+} */
+
+.nav-link {
+    transition: 0.3s ease-out;
+    border-bottom: 2px solid transparent; /* Initial state with transparent border */
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #ce3c83; /* Hover state with colored border */
+}
