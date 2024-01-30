@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-navbar',
@@ -9,8 +10,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './admin-navbar.component.css'
 })
 export class AdminNavbarComponent {
-  isActive(route: string): boolean {
-    console.log(route);
-    return true;
+  constructor(private router: Router) {}
+
+  redirectToAboutUs(): void {
+    this.router.navigate(['/about-us']);
   }
 }
