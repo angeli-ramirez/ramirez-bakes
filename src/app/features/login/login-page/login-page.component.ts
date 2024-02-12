@@ -37,7 +37,7 @@ export class LoginPageComponent {
       this.userService.login(email, password)
         .subscribe(
           response => {
-            localStorage.setItem('is_authenticated','true');
+            sessionStorage.setItem('is_authenticated','true');
             this.isLoading = false;
             this.router.navigate(['/dashboard']);
           },

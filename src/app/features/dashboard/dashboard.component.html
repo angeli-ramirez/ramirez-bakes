@@ -1,6 +1,121 @@
 <app-admin-navbar></app-admin-navbar>
 
-<div class="dashboard-content">
-    <p>Dashboard</p>
-    <!-- ... rest of your dashboard content ... -->
+<div class="dashboard-content text-base">
+  <div class="flex flex-wrap -mx-3">
+    <!-- card1 -->
+    <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 sm:flex-none xl:mb-0 xl:w-1/4">
+      <div class="relative flex flex-col min-w-0 break-words bg-white shadow-soft-xl rounded-2xl bg-clip-border">
+        <div class="flex-auto p-4">
+          <div class="flex flex-row -mx-3">
+            <div class="flex-none w-2/3 max-w-full px-3">
+              <div>
+                <p class="mb-0 text-sm font-semibold leading-normal">Total Sales</p>
+                <h5 class="mb-0 font-bold">
+                  Php 53,000
+                  <span class="text-sm leading-normal font-weight-bolder text-lime-500">+55%</span>
+                </h5>
+              </div>
+            </div>
+            <div class="px-3 text-right basis-1/3">
+              <div class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-bl from-pink-300 to-purple-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  class="humbleicons hi-coins relative text-xs text-white leading-none p-2">
+                  <path xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"
+                    d="M7.5 8l1-.5v4m9-2.125A5.502 5.502 0 0115.5 20c-1.796 0-3.39-.86-4.395-2.192M14 9.5a5.5 5.5 0 11-11 0 5.5 5.5 0 0111 0z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- card2 -->
+    <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 sm:flex-none xl:mb-0 xl:w-1/4">
+      <div class="relative flex flex-col min-w-0 break-words bg-white shadow-soft-xl rounded-2xl bg-clip-border">
+        <div class="flex-auto p-4">
+          <div class="flex flex-row -mx-3">
+            <div class="flex-none w-2/3 max-w-full px-3">
+              <div>
+                <p class="mb-0  text-sm font-semibold leading-normal">Total Orders</p>
+                <h5 class="mb-0 font-bold">
+                  50
+                  <span class="text-sm leading-normal font-weight-bolder text-lime-500">+3%</span>
+                </h5>
+              </div>
+            </div>
+            <div class="px-3 text-right basis-1/3">
+              <div class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-bl from-pink-300 to-purple-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  class="humbleicons hi-cart relative text-xs text-white leading-none p-2">
+                  <circle xmlns="http://www.w3.org/2000/svg" cx="7.5" cy="18.5" r="1.5" fill="currentColor" />
+                  <circle xmlns="http://www.w3.org/2000/svg" cx="16.5" cy="18.5" r="1.5" fill="currentColor" />
+                  <path xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" d="M3 5h2l.6 3m0 0L7 15h10l2-7H5.6z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- card3 -->
+    <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 sm:flex-none xl:mb-0 xl:w-1/4">
+      <div class="relative flex flex-col min-w-0 break-words bg-white shadow-soft-xl rounded-2xl bg-clip-border">
+        <div class="flex-auto p-4">
+          <div class="flex flex-row -mx-3">
+            <div class="flex-none w-2/3 max-w-full px-3">
+              <div>
+                <p class="mb-0  text-sm font-semibold leading-normal">Pending Orders</p>
+                <h5 class="mb-0 font-bold">
+                  5
+                  <span class="text-sm leading-normal text-red-600 font-weight-bolder">-2%</span>
+                </h5>
+              </div>
+            </div>
+            <div class="px-3 text-right basis-1/3">
+              <div class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-bl from-pink-300 to-purple-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  class="humbleicons hi-clock relative text-xs text-white leading-none p-2">
+                  <path xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" d="M12 6.5V12l3.5 2m5.5-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- card4 -->
+    <div class="w-full max-w-full px-3 sm:w-1/2 sm:flex-none xl:w-1/4">
+      <div class="relative flex flex-col min-w-0 break-words bg-white shadow-soft-xl rounded-2xl bg-clip-border">
+        <div class="flex-auto p-4">
+          <div class="flex flex-row -mx-3">
+            <div class="flex-none w-2/3 max-w-full px-3">
+              <div>
+                <p class="mb-0  text-sm font-semibold leading-normal">Available Products</p>
+                <h5 class="mb-0 font-bold">
+                  12
+                  <span class="text-sm leading-normal font-weight-bolder text-lime-500">+5%</span>
+                </h5>
+              </div>
+            </div>
+            <div class="px-3 text-right basis-1/3">
+              <div class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-bl from-pink-300 to-purple-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  class="humbleicons hi-package relative text-xs text-white leading-none p-2">
+                  <path xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2"
+                    d="M4 8l8 4M4 8v8l8 4M4 8l4-2m4 6l4-2m-4 2v8m8-12l-8-4-4 2m12 2v8l-8 4m8-12l-4 2m0 0L8 6" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>

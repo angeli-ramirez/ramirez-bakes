@@ -1,7 +1,13 @@
-.header{
-    background-color: #ffe5f1;
-}
-
 .shop-button{
     background-color: #ffd3d6;
+}
+
+.humbleicons {
+	/* width: 1em;
+	height: 0.75em;
+	display: inline-block;
+	align-self: center;
+	vertical-align: middle;
+	margin-top: -0.1em; */
+    font-size: 1rem
 }
